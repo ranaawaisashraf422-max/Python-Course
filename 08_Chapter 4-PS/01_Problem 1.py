@@ -1,0 +1,19 @@
+#Write  program to enter 7 fruit names in a list entered by a user
+
+Fruits=[]
+f1=input("Enter Fruit name :")
+Fruits.append(f1)
+f2=input("Enter Fruit name :")
+Fruits.append(f2)
+f3=input("Enter Fruit name :")
+Fruits.append(f3)
+f4=input("Enter Fruit name :")
+Fruits.append(f4)
+f5=input("Enter Fruit name :")
+Fruits.append(f5)
+f6=input("Enter Fruit name :")
+Fruits.append(f6)
+f7=input("Enter Fruit name :")
+Fruits.append(f7)
+
+print(Fruits)
