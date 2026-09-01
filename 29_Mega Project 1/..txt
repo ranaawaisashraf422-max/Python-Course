@@ -1,0 +1,44 @@
+ elif "news" in c.lower():
+          r = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&apiKey={newsapi}")
+
+          if r.status_code == 200:
+              # Parse the JSON response
+              data = r.json()
+
+              # Extract the articles
+              articles = data.get('articles', [])
+
+              # Print the headlines
+              for article in articles:
+                    speak(article['title'])
+
+
+#if want detailed news use this
+elif "news" in c.lower():
+        speak("Sure, I am fetching the latest news")
+
+        r = requests.get(
+                f"https://newsapi.org/v2/top-headlines?country=us&apiKey={newsapi}")
+
+        print("Status Code:", r.status_code)
+        print("Response:", r.text[:500])
+
+        if r.status_code == 200:
+                data = r.json()
+                articles = data.get("articles", [])
+
+                if articles:
+                        speak("Here are the latest headlines")
+
+                        for article in articles[:5]:
+                                title = article.get("title")
+
+                                if title:
+                                        print(title)
+                                        speak(title)
+                else:
+                        speak("Sorry, I could not find any news")
+
+        else:
+                speak("Sorry, I could not retrieve the news")
+                print("News API Error:", r.text)
