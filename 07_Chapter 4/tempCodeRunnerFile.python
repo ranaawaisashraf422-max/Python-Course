@@ -1,0 +1,2 @@
+a=(2,12,345,5678,"Awais",False,"Abeeha")
+print(a.index(345,0,5))

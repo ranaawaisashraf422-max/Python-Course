@@ -1,0 +1,10 @@
+# Count Method
+a=(2,12,345,5678,"Awais",False,"Abeeha")
+print(a.count(345))
+
+# Index Method
+a=(2,12,345,5678,"Awais",False,"Abeeha")
+print(a.index(345))
+
+a=(2,12,345,5678,"Awais",False,"Abeeha")
+print(a.index(345,0,5))
